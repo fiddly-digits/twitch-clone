@@ -37,7 +37,7 @@ function App() {
               <h5 className='text-decoration-underline'>Categories</h5>
               <h5>Live Channels</h5>
             </div>
-            <div className='d-flex gap-2 flex-wrap'>
+            <div className='d-flex gap-3 flex-wrap'>
               <GameCard />
               <GameCard
                 title='League of Legends'
