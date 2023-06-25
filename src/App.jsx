@@ -1,6 +1,3 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import Streamer from './components/Streamer';
 import GameCard from './components/GameCard';
 
@@ -9,9 +6,12 @@ function App() {
     <>
       <div className='container-fluid'>
         <div className='row'>
-          <aside className='col-md-2 col-1'>
+          <aside className='col-md-2 col-1 bg-secondary-subtle'>
             <div>
-              <h5 className='d-none d-md-block'>Recomended Channels</h5>
+              <h5 className='d-none d-md-block text-nowrap'>
+                Recomended Channels
+              </h5>
+
               <h5 className='d-md-none d-inline'>📹</h5>
               <Streamer
                 viewers='10'
@@ -21,20 +21,20 @@ function App() {
               <Streamer
                 viewers='10'
                 currentGame='God of War'
-                nickname='aldo_geo'
+                nickname='shroud'
               />
-              <Streamer currentGame='God of War' nickname='aldo_geo' />
+              <Streamer nickname='collectiveu' />
               <Streamer
                 viewers='0'
                 currentGame='God of War'
-                nickname='aldo_geo'
+                nickname='Fextralife'
               />
             </div>
           </aside>
           <main className='col-10'>
             <h1>Browse</h1>
-            <div className='d-flex gap-3'>
-              <h5>Categories</h5>
+            <div className='d-flex gap-3 pb-3'>
+              <h5 className='text-decoration-underline'>Categories</h5>
               <h5>Live Channels</h5>
             </div>
             <div className='d-flex gap-2 flex-wrap'>
@@ -64,16 +64,32 @@ function App() {
                 tags='RPG Action'
                 isNew
               />
+              <GameCard
+                title='Resident Evil 4'
+                img='https://static-cdn.jtvnw.net/ttv-boxart/322503446_IGDB-285x380.jpg'
+                viewers='1K'
+                tags='Shooter Puzzle'
+              />
               <GameCard />
               <GameCard />
               <GameCard />
+              <GameCard
+                title='Lies of P'
+                img='https://static-cdn.jtvnw.net/ttv-boxart/653624336_IGDB-285x380.jpg'
+                viewers='1.3K'
+                tags='RPG Action'
+                isNew
+              />
               <GameCard />
               <GameCard />
+              <GameCard
+                title='God of War Ragnarök'
+                img='https://static-cdn.jtvnw.net/ttv-boxart/102007682_IGDB-144x192.jpg'
+                viewers='1.3K'
+                tags='Action Adventure'
+              />
               <GameCard />
-              <GameCard />
-              <GameCard />
-              <GameCard />
-              <GameCard />
+              <GameCard isNew />
               <GameCard />
               <GameCard />
               <GameCard />

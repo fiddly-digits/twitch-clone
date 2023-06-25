@@ -9,7 +9,7 @@ export default function GameCard(props) {
   return (
     <>
       <div className='card' style={{ width: '11rem' }}>
-        <div>
+        <div className='card-top'>
           <img
             src={
               img
@@ -20,7 +20,7 @@ export default function GameCard(props) {
             alt='game'
           />
           {isNew && (
-            <span class='card-badge position-absolute translate-middle badge rounded-pill'>
+            <span class='card-badge position-absolute translate-middle badge rounded-pill z-2'>
               New
             </span>
           )}
