@@ -5,34 +5,36 @@ function App() {
   return (
     <>
       <div className='container-fluid'>
-        <div className='row'>
-          <aside className='col-md-2 col-1 bg-secondary-subtle'>
-            <div>
-              <h5 className='d-none d-md-block text-nowrap'>
+        <div className='row flex-nowrap'>
+          <div className='col-auto col-md-2 col-xl-2 px-sm-2 px-0 bg-dark-subtle'>
+            <aside className='d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100'>
+              <span className='fs-5 d-none d-sm-inline'>
                 Recomended Channels
-              </h5>
+              </span>
+              <span className='d-md-none d-inline'>📹</span>
 
-              <h5 className='d-md-none d-inline'>📹</h5>
-              <Streamer
-                viewers='10'
-                currentGame='God of War'
-                nickname='aldo_geo'
-              />
-              <Streamer
-                viewers='10'
-                currentGame='God of War'
-                nickname='shroud'
-              />
-              <Streamer nickname='collectiveu' />
-              <Streamer
-                viewers='0'
-                currentGame='God of War'
-                nickname='Fextralife'
-              />
-            </div>
-          </aside>
-          <main className='col-10'>
-            <h1>Browse</h1>
+              <ul className='nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start'>
+                <Streamer
+                  viewers='10'
+                  currentGame='God of War'
+                  nickname='aldo_geo'
+                />
+                <Streamer
+                  viewers='10'
+                  currentGame='God of War'
+                  nickname='shroud'
+                />
+                <Streamer nickname='collectiveu' />
+                <Streamer
+                  viewers='0'
+                  currentGame='God of War'
+                  nickname='Fextralife'
+                />
+              </ul>
+            </aside>
+          </div>
+          <main className='col-10 py-3'>
+            <h3>Browse</h3>
             <div className='d-flex gap-3 pb-3'>
               <h5 className='text-decoration-underline'>Categories</h5>
               <h5>Live Channels</h5>
