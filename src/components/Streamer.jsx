@@ -1,5 +1,5 @@
 export default function Streamer(props) {
-  const { viewers, currentGame, nickname } = props;
+  const { nickname, currentGame, viewers } = props;
   const profileImg = `https://api.dicebear.com/6.x/fun-emoji/svg?seed=${nickname}`;
   return (
     <>

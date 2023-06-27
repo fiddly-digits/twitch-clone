@@ -1,11 +1,6 @@
 export default function GameCard(props) {
   const { title, tags, img, viewers, isNew } = props;
-  let convertedTags = [];
-  if (tags) {
-    convertedTags = tags.includes(' ') ? tags.split(' ') : [tags];
-  } else {
-    convertedTags = ['Placeholder'];
-  }
+
   return (
     <>
       <div className='card' style={{ width: '11rem' }}>
@@ -20,7 +15,7 @@ export default function GameCard(props) {
             alt='game'
           />
           {isNew && (
-            <span class='card-badge position-absolute translate-middle badge rounded-pill z-2'>
+            <span className='card-badge position-absolute translate-middle badge rounded-pill z-2'>
               New
             </span>
           )}
@@ -31,8 +26,11 @@ export default function GameCard(props) {
           </h5>
           <p className='card-text fs-6'>{viewers ? viewers : '0'} viewers</p>
           <div className='card-tags d-flex gap-1'>
-            {convertedTags.map((tag) => (
-              <span className='card-tag rounded-pill bg-secondary-subtle px-2 text-nowrap'>
+            {tags.map((tag, index) => (
+              <span
+                key={`tag-${index}`}
+                className='card-tag rounded-pill bg-secondary-subtle px-2 text-nowrap'
+              >
                 {tag}
               </span>
             ))}
